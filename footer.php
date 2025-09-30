@@ -56,18 +56,18 @@
                         Обратный звонок
                     </button>
                 </div>
-            </div>
 
-            <!-- Кнопки обратного звонка -->
-            <div class="d-flex align-items-center mb-4">
-                <img src="img/ico/calculator-ico.svg" alt="Адрес" class="me-3 img-fluid" />
+                <!-- Кнопки обратного звонка -->
+                <div class="d-flex align-items-center mb-4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/ico/calculator-ico.svg" alt="Адрес" class="me-3 img-fluid" />
 
-                <button
-                    class="nav-link d-flex align-items-center gap-3 gap-md-2 gap-xl-3 lh-1"
-                    data-bs-toggle="modal"
-                    data-bs-target="#calculatePriceWithDownloadModal">
-                    Рассчитать стоимость
-                </button>
+                    <button
+                        class="nav-link d-flex align-items-center gap-3 gap-md-2 gap-xl-3 lh-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#calculatePriceWithDownloadModal">
+                        Рассчитать стоимость
+                    </button>
+                </div>
             </div>
         </div>
 
