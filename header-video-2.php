@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900">
-    <meta name="description" content="<?php echo_description(); ?>" />
-    <meta property="og:description" content="<?php echo_description(); ?>" />
+    <meta name="description" content="<?php bloginfo(); ?>" />
+    <meta property="og:description" content="<?php bloginfo(); ?>" />
     <meta name="keywords" content="<?php echo wp_get_document_title(); ?>" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
