@@ -93,33 +93,33 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 
         // Показываем точки в меню, первый вариант
-               // Показываем точки в меню
-$item_title = $item->title;
-$dropdown = in_array('dropdown', $classes);
+        // Показываем точки в меню
+        $item_title = $item->title;
+        $dropdown = in_array('dropdown', $classes);
 
-// Проверяем, является ли это меню футера (мобильное или десктопное)
-$is_footer_menu = ($args->theme_location == 'contacts-desktop-menu');
+        // Проверяем, является ли это меню футера (мобильное или десктопное)
+        $is_footer_menu = ($args->theme_location == 'contacts-desktop-menu');
 
-if ($item_title == 'Контакты') {
-    // Для последнего пункта "Контакты" точку не показываем
-    $output .= '
+        if ($item_title == 'Контакты') {
+            // Для последнего пункта "Контакты" точку не показываем
+            $output .= '
         <li class="nav-item d-none">
             <span class="nav-link">
                 <img src="' . get_template_directory_uri() . '/img/ico/menu-decoration-point.svg" alt="">
             </span>
         </li>
     ';
-} else if ($dropdown == false and $depth == 0) {
-    // Для футера показываем точки всегда, для остальных меню - только на desktop
-    $visibility_class = $is_footer_menu ? '' : 'd-none d-xl-inline';
-    $output .= '
+        } else if ($dropdown == false and $depth == 0) {
+            // Для футера показываем точки всегда, для остальных меню - только на desktop
+            $visibility_class = $is_footer_menu ? '' : 'd-none d-xl-inline';
+            $output .= '
         <li class="nav-item ' . $visibility_class . '">
             <span class="nav-link">
                 <img src="' . get_template_directory_uri() . '/img/ico/menu-decoration-point.svg" alt="">
             </span>
         </li>
     ';
-}
+        }
     }
 }
 /* End Bootstrap 5 wp_nav_menu walker */
@@ -139,7 +139,8 @@ add_action('after_setup_theme', function () {
 });
 /* End register a new menu */
 
-function mytheme_start_session() {
+function mytheme_start_session()
+{
     if (!session_id()) {
         session_start();
     }
@@ -147,14 +148,15 @@ function mytheme_start_session() {
 add_action('init', 'mytheme_start_session', 1);
 
 // Инициализация переменных сессии
-function mytheme_init_session_vars() {
+function mytheme_init_session_vars()
+{
     if (!isset($_SESSION['display'])) {
         $_SESSION['display'] = 'none';
     }
     if (!isset($_SESSION['recaptcha'])) {
         $_SESSION['recaptcha'] = '';
     }
-    
+
     // Проверяем флаг успешной отправки формы
     if (isset($_SESSION['win'])) {
         unset($_SESSION['win']);
@@ -251,23 +253,23 @@ function register_custom_post_types()
         'rewrite' => false,
         'query_var' => false,
     ]);
-	
-	// Отзывы (reviews)
-	register_post_type('reviews', [
-		'label' => null,
-		'labels' => [
-			'name' => 'Отзыв',
-			'singular_name' => 'Отзыв',
-			'add_new' => 'Добавить отзыв',
-			'add_new_item' => 'Добавление отзыва',
-			'edit_item' => 'Редактирование отзыва',
-			'new_item' => 'Новый отзыв',
-			'view_item' => 'Смотреть отзыв',
-			'search_items' => 'Искать отзыв',
-			'not_found' => 'Не найдено',
-			'not_found_in_trash' => 'Не найдено в корзине',
-			'menu_name' => 'Отзывы',
-		],
+
+    // Отзывы (reviews)
+    register_post_type('reviews', [
+        'label' => null,
+        'labels' => [
+            'name' => 'Отзыв',
+            'singular_name' => 'Отзыв',
+            'add_new' => 'Добавить отзыв',
+            'add_new_item' => 'Добавление отзыва',
+            'edit_item' => 'Редактирование отзыва',
+            'new_item' => 'Новый отзыв',
+            'view_item' => 'Смотреть отзыв',
+            'search_items' => 'Искать отзыв',
+            'not_found' => 'Не найдено',
+            'not_found_in_trash' => 'Не найдено в корзине',
+            'menu_name' => 'Отзывы',
+        ],
         'public' => true,
         'show_in_menu' => true,
         'menu_icon' => 'dashicons-groups',
@@ -283,21 +285,23 @@ function register_custom_post_types()
 
 // Добавляем метабокс с полями
 add_action('add_meta_boxes', 'reviews_add_fields');
-function reviews_add_fields() {
+function reviews_add_fields()
+{
     add_meta_box('review_fields', 'Информация об отзыве', 'reviews_fields_html', 'reviews', 'normal');
 }
 
 // HTML полей
-function reviews_fields_html($post) {
+function reviews_fields_html($post)
+{
     $date = get_post_meta($post->ID, 'review_date', true) ?: date('d.m.Y');
     $rating = get_post_meta($post->ID, 'review_rating', true) ?: 5;
-    ?>
+?>
     <p>
         <label><b>Дата отзыва:</b></label><br>
         <input type="text" name="review_date" value="<?php echo esc_attr($date); ?>" style="width: 300px">
         <span style="color: #666">(например: 24 декабря 2024)</span>
     </p>
-    
+
     <p>
         <label><b>Количество звезд:</b></label><br>
         <select name="review_rating" style="width: 150px">
@@ -308,12 +312,13 @@ function reviews_fields_html($post) {
             <option value="5" <?php selected($rating, 5); ?>>5 звезд</option>
         </select>
     </p>
-    <?php
+<?php
 }
 
 // Сохранение полей
 add_action('save_post_reviews', 'reviews_save_fields');
-function reviews_save_fields($post_id) {
+function reviews_save_fields($post_id)
+{
     if (isset($_POST['review_date'])) {
         update_post_meta($post_id, 'review_date', sanitize_text_field($_POST['review_date']));
     }
@@ -508,8 +513,8 @@ add_action('customize_register', 'mytheme_customize_register');
 function mytheme_enqueue_assets()
 {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/theme.css');
-	wp_enqueue_style('font', get_template_directory_uri() . '/css/font.css');
+    wp_enqueue_style('theme-style', get_template_directory_uri() . '/css/theme.css');
+    wp_enqueue_style('font', get_template_directory_uri() . '/css/font.css');
     wp_enqueue_style('glide', get_template_directory_uri() . '/css/glide.core.min.css');
 
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), null, true);
@@ -522,7 +527,7 @@ function mytheme_enqueue_assets()
 add_action('wp_enqueue_scripts', 'mytheme_enqueue_assets');
 
 
-if( function_exists('acf_add_options_page') ) {
+if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
         'page_title'    => 'О нас',
         'menu_title'    => 'О нас',
@@ -533,3 +538,26 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false,
     ));
 }
+
+
+/*** ДЕЛАЕМ ПРАВИЛЬНЫЙ DESCRIPTION ДЛЯ КАЖДОЙ СТРАНИЦЫ ***/
+function echo_description()
+{
+
+    // Если страница стандартной категории поста
+    if (is_category()) {
+        echo wp_strip_all_tags(category_description());
+    } elseif (is_post_type_archive('portfolio')) {
+        echo 'Портфолио';
+
+        // Если страница категорий портфолио
+    } elseif (is_tax('portfolio-cat')) {
+        $term = get_queried_object(); // Получаем текущий термин
+        echo $term->description;
+        //echo 'Категория портфолио';
+
+    } else {
+        echo get_the_excerpt();
+    }
+}
+/*** END ДЕЛАЕМ ПРАВИЛЬНЫЙ DESCRIPTION ДЛЯ КАЖДОЙ СТРАНИЦЫ ***/
