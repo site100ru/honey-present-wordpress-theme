@@ -308,9 +308,10 @@
                             style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.15) 100%)"></div>
                     </div>
                     <h1 class="home-title home-title-main text-center text-lg-start mb-3 mb-xl-4 pb-0 pb-xl-3">
+                        <?php bloginfo('name'); ?>
                     </h1>
-					
-					<button class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" data-bs-toggle="modal" data-bs-target="#downloadModal">Скачать каталог</button>
+
+                    <button class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" data-bs-toggle="modal" data-bs-target="#downloadModal">Скачать каталог</button>
 
 
                     <!--                     <a href="<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf" class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" download="">
