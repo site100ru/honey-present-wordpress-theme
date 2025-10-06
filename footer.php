@@ -48,7 +48,7 @@
                 <?php endif; ?>
             </div>
 
-            <!-- Кнопки обратного звонка -->
+           <!-- Кнопки обратного звонка -->
             <div class="col-12 col-md-6 col-xl-4 mb-0 mb-md-4">
                 <div class="d-flex align-items-center mb-4 pb-md-3">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/ico/callback-ico.svg" alt="Обратный звонок" class="me-3 img-fluid" />
@@ -113,6 +113,30 @@
             </div>
         </div>
     </div>
+	
+	<!-- Mobile version -->
+	<div class="container d-xl-none">
+		<div class="row">
+			<div class="col py-5">
+				<a href="<?php echo home_url('/'); ?>" class="mx-auto">
+					<?php if (has_custom_logo()) : ?>
+					<?php the_custom_logo(); ?>
+					<?php else : ?>
+					<img id="navbar-brand-img" src="<?php echo get_template_directory_uri(); ?>/img/ico/logo-light.svg" class="img-fluid" />
+					<?php endif; ?>
+				</a>
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'contacts-desktop-menu',
+					'container' => false,
+					'menu_class' => 'nav nav-mobile justify-content-end flex-column align-content-center pt-5',
+					'walker' => new bootstrap_5_wp_nav_menu_walker()
+				]);
+				?>
+			</div>
+		</div>
+	</div>
+	<!-- /Mobile version -->
 
     <!-- Footer Copyright -->
     <footer style="padding: 29px 0">
@@ -193,6 +217,59 @@
     </div>
 </div>
 
+<!-- Download Modal -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form method="post" action="<?php echo get_template_directory_uri(); ?>/mails/download-mail.php" class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="downloadModalLabel">Скачать презентацию</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <p><small>Заполните форму для скачивания файла</small></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Ваше имя*" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input type="tel" name="tel" class="form-control telMask" placeholder="Ваш телефон*" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn-lg btn btn-corporate-color-1 mx-auto">
+                    Скачать
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+document.querySelector('#downloadModal form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Сначала скачиваем файл
+    var link = document.createElement('a');
+    link.setAttribute('href', '<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf');
+    link.setAttribute('download', 'catalog_new_compressed.pdf');
+    link.click();
+    
+    // Потом отправляем форму
+    this.submit();
+});
+</script>
 
 <script>
     // Функции для модальных окон подарков
@@ -240,3 +317,31 @@
         }
     });
 </script>
+
+
+<?php
+$display = isset($_SESSION['display']) ? $_SESSION['display'] : 'none';
+$message = isset($_SESSION['recaptcha']) ? $_SESSION['recaptcha'] : '';
+?>
+
+
+
+<!-- Показываем сообщение об успешной отправки -->
+<div style="display: <?php echo $display; ?>;" onclick="modalClose();">
+    <div id="background-msg" style="display: <?php echo $display; ?>;"></div>
+    <button id="btn-close" type="button" class="btn-close btn-close-white" onclick="modalClose();"
+        style="position: absolute; z-index: 9999; top: 15px; right: 15px;"></button>
+    <div id="message">
+        <?php 
+        echo $message;
+        // Очищаем переменные после показа
+        if (isset($_SESSION['recaptcha'])) {
+            unset($_SESSION['recaptcha']);
+        }
+        if (isset($_SESSION['display'])) {
+            $_SESSION['display'] = 'none';
+        }
+        ?>
+    </div>
+</div>
+

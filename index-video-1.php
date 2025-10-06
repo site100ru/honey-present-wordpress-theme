@@ -9,326 +9,7 @@
 <?php get_header('video-1'); ?>
 
 <!-- ABOUT SECTION -->
-<div id="sp-about" class="scroll-points"></div>
-<section class="about-section section">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2>О нас</h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/img/ico/section-title-dec.svg" alt="Пчелки между секциями" class="img-fluid section-decor" />
-            </div>
-        </div>
-
-        <div class="row justify-content-between about_box">
-            <div class="col-12 col-md-6 col-xl-6 text-center">
-                <a onclick="aboutSectionGalleryOn_1('aboutSectionGallery_1','imgAboutSectionGallery_1-1');">
-                    <div class="single-product-img approximation">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-1.png" class="img-fluid rounded" alt="О нас" />
-                        <div class="magnifier"></div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="d-none d-xl-block col-xl-1"></div>
-
-            <div class="col-12 col-md-6 col-xl-5 description_about align-content-center">
-                <h3 class="blockquote">Только тех, кто любит труд - пчеловодами зовут!</h3>
-                <p class="text-start">Вас приветствует пасека потомственных пчеловодов Анохиных.</p>
-                <p class="text-start">
-                    Бренд «Мёд от деда Димы» назван в честь моего дедули и наставника пчеловода в 4 поколении Дмитрия Павловича Анохина.
-                </p>
-                <p class="text-start">
-                    Корни династии Анохиных тянутся из деревни Решетино Торобеевского района Мордовского края, в который с 19 века наши прадеды успешно
-                    развивали бортничество.
-                </p>
-            </div>
-        </div>
-
-        <!-- Скрытый блок (коллапс) -->
-        <div class="collapse" id="aboutCollapse">
-            <div class="row justify-content-between about_box">
-                <div class="col-12 col-md-6 col-xl-5 description_about align-content-center">
-                    <p class="text-start">
-                        В середине XX века, в годы индустриализации и бурного роста городов, Дмитрий Павлович в месте с молодой семьей покинул село и
-                        переехал в Рязань - устраивать жизнь «с чистого листа».
-                    </p>
-                    <p class="text-start">
-                        Работая в городе, он не мог оставить ремесло, которое унаследовал от своих проатцов, и решил построить по собственным чертежам
-                        уникальный пчеловодческий стационар, который до сих пор является самым большим комплексом во всей Рязанской области
-                    </p>
-                </div>
-
-                <div class="d-none d-xl-block col-xl-1"></div>
-
-                <div class="col-12 col-md-6 col-xl-6 text-center">
-                    <a onclick="aboutSectionGalleryOn_2('aboutSectionGallery_2','imgAboutSectionGallery_2-1');">
-                        <div class="single-product-img approximation">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-2.png" class="img-fluid rounded" alt="О нас" />
-                            <div class="magnifier"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row justify-content-between about_box">
-                <div class="col-12 col-md-6 col-xl-6 text-center order-2 order-md-1">
-                    <a onclick="aboutSectionGalleryOn_3('aboutSectionGallery_3','imgAboutSectionGallery_3-1');">
-                        <div class="single-product-img approximation">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-3.png" class="img-fluid rounded" alt="О нас" />
-                            <div class="magnifier"></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="d-none d-xl-block col-xl-1 order-md-2"></div>
-
-                <div class="col-12 col-md-6 col-xl-5 description_about align-content-center order-1 order-md-3">
-                    <p>
-                        Одним из важнейших критериев выбора места для постройки было своеобразие окружающего биоценоза. За десятилетия развития
-                        пчеловодства мы убедились в этом сполна: девственная природа со множеством лесов, водоёмов, лугов и оврагов дают продукту
-                        неповторимый многоголосный вкус и аромат, который признают, как ревнивые ценитили, так и любители, желающие полакомиться
-                        натуральным мёдом сорта <span class="blockquote"> «Душистое Разнотравье».</span>
-                    </p>
-                </div>
-            </div>
-            <div class="row justify-content-between about_box">
-                <div class="col-12 col-md-6 col-xl-5 description_about align-content-center">
-                    <p class="text-start">
-                        Мы всей душой любим своё дело и, производя медовые продукты, вкладываем частичку доброты и заботы, которой делимся с каждым вот
-                        уже третье столетие, передавай блогородное ремесло из поколения в поколение.
-                    </p>
-                    <h3 class="blockquote">Дмитрий Анохин.</h3>
-                </div>
-
-                <div class="d-none d-xl-block col-xl-1"></div>
-
-                <div class="col-12 col-md-6 col-xl-6 text-center">
-                    <a onclick="aboutSectionGalleryOn_4('aboutSectionGallery_4','imgAboutSectionGallery_4-1');">
-                        <div class="single-product-img approximation">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-4.png" class="img-fluid rounded" alt="О нас" />
-                            <div class="magnifier"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Кнопка по центру -->
-        <div class="row my-4">
-            <div class="col text-center">
-                <button
-                    class="btn btn-corporate-color-1 btn-arrow"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#aboutCollapse"
-                    aria-expanded="false"
-                    aria-controls="aboutCollapse"
-                    id="aboutToggleBtn">
-                    Читать дальше
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-bottom.svg" alt="" id="arrowIcon" />
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Модальное окно для первого изображения -->
-<div id="aboutSectionGalleryWrapper_1" style="display: none">
-    <div
-        id="aboutSectionGallery_1"
-        class="carousel slide"
-        data-bs-ride="false"
-        data-bs-interval="false"
-        style="display: none; position: fixed; top: 0; height: 100%; width: 100%; z-index: 99999; background: rgba(0, 0, 0, 0.9)">
-        <div class="carousel-inner h-100">
-            <div id="imgAboutSectionGallery_1-1" class="carousel-item h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col text-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-1.png" class="img-fluid lazyload" loading="lazy" style="max-width: 90vw; max-height: 90vh" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Кнопка закрытия галереи -->
-    <button
-        type="button"
-        onclick="aboutSectionGalleryClose_1();"
-        class="btn-close btn-close-white"
-        style="position: fixed; top: 25px; right: 25px; z-index: 99999"
-        aria-label="Close"></button>
-</div>
-
-<div id="aboutSectionGalleryWrapper_2" style="display: none">
-    <div
-        id="aboutSectionGallery_2"
-        class="carousel slide"
-        data-bs-ride="false"
-        data-bs-interval="false"
-        style="display: none; position: fixed; top: 0; height: 100%; width: 100%; z-index: 99999; background: rgba(0, 0, 0, 0.9)">
-        <div class="carousel-inner h-100">
-            <div id="imgAboutSectionGallery_2-1" class="carousel-item h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col text-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-2.png" class="img-fluid lazyload" loading="lazy" style="max-width: 90vw; max-height: 90vh" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button
-        type="button"
-        onclick="aboutSectionGalleryClose_2();"
-        class="btn-close btn-close-white"
-        style="position: fixed; top: 25px; right: 25px; z-index: 99999"
-        aria-label="Close"></button>
-</div>
-
-<!-- Модальное окно для третьего изображения -->
-<div id="aboutSectionGalleryWrapper_3" style="display: none">
-    <div
-        id="aboutSectionGallery_3"
-        class="carousel slide"
-        data-bs-ride="false"
-        data-bs-interval="false"
-        style="display: none; position: fixed; top: 0; height: 100%; width: 100%; z-index: 99999; background: rgba(0, 0, 0, 0.9)">
-        <div class="carousel-inner h-100">
-            <div id="imgAboutSectionGallery_3-1" class="carousel-item h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col text-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-3.png" class="img-fluid lazyload" loading="lazy" style="max-width: 90vw; max-height: 90vh" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button
-        type="button"
-        onclick="aboutSectionGalleryClose_3();"
-        class="btn-close btn-close-white"
-        style="position: fixed; top: 25px; right: 25px; z-index: 99999"
-        aria-label="Close"></button>
-</div>
-
-<!-- Модальное окно для четвертого изображения -->
-<div id="aboutSectionGalleryWrapper_4" style="display: none">
-    <div
-        id="aboutSectionGallery_4"
-        class="carousel slide"
-        data-bs-ride="false"
-        data-bs-interval="false"
-        style="display: none; position: fixed; top: 0; height: 100%; width: 100%; z-index: 99999; background: rgba(0, 0, 0, 0.9)">
-        <div class="carousel-inner h-100">
-            <div id="imgAboutSectionGallery_4-1" class="carousel-item h-100">
-                <div class="row align-items-center h-100">
-                    <div class="col text-center">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/card-image-4.png" class="img-fluid lazyload" loading="lazy" style="max-width: 90vw; max-height: 90vh" alt="..." />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <button
-        type="button"
-        onclick="aboutSectionGalleryClose_4();"
-        class="btn-close btn-close-white"
-        style="position: fixed; top: 25px; right: 25px; z-index: 99999"
-        aria-label="Close"></button>
-</div>
-
-<script>
-    /* Функции для второго изображения */
-    function aboutSectionGalleryOn_1(gal, img) {
-        document.getElementById('aboutSectionGalleryWrapper_1').style.display = 'block';
-        if (gal == 'aboutSectionGallery_1') {
-            document.getElementById('aboutSectionGallery_1').style.display = 'block';
-        }
-        if (img == 'imgAboutSectionGallery_1-1') {
-            document.getElementById('imgAboutSectionGallery_1-1').classList.add('active');
-        }
-    }
-
-    function aboutSectionGalleryClose_1() {
-        document.getElementById('aboutSectionGalleryWrapper_1').style.display = 'none';
-        document.getElementById('aboutSectionGallery_1').style.display = 'none';
-        document.getElementById('imgAboutSectionGallery_1-1').classList.remove('active');
-    }
-
-    /* Функции для второго изображения */
-    function aboutSectionGalleryOn_2(gal, img) {
-        document.getElementById('aboutSectionGalleryWrapper_2').style.display = 'block';
-        if (gal == 'aboutSectionGallery_2') {
-            document.getElementById('aboutSectionGallery_2').style.display = 'block';
-        }
-        if (img == 'imgAboutSectionGallery_2-1') {
-            document.getElementById('imgAboutSectionGallery_2-1').classList.add('active');
-        }
-    }
-
-    function aboutSectionGalleryClose_2() {
-        document.getElementById('aboutSectionGalleryWrapper_2').style.display = 'none';
-        document.getElementById('aboutSectionGallery_2').style.display = 'none';
-        document.getElementById('imgAboutSectionGallery_2-1').classList.remove('active');
-    }
-
-    /* Функции для третьего изображения */
-    function aboutSectionGalleryOn_3(gal, img) {
-        document.getElementById('aboutSectionGalleryWrapper_3').style.display = 'block';
-        if (gal == 'aboutSectionGallery_3') {
-            document.getElementById('aboutSectionGallery_3').style.display = 'block';
-        }
-        if (img == 'imgAboutSectionGallery_3-1') {
-            document.getElementById('imgAboutSectionGallery_3-1').classList.add('active');
-        }
-    }
-
-    function aboutSectionGalleryClose_3() {
-        document.getElementById('aboutSectionGalleryWrapper_3').style.display = 'none';
-        document.getElementById('aboutSectionGallery_3').style.display = 'none';
-        document.getElementById('imgAboutSectionGallery_3-1').classList.remove('active');
-    }
-
-    /* Функции для четвертого изображения */
-    function aboutSectionGalleryOn_4(gal, img) {
-        document.getElementById('aboutSectionGalleryWrapper_4').style.display = 'block';
-        if (gal == 'aboutSectionGallery_4') {
-            document.getElementById('aboutSectionGallery_4').style.display = 'block';
-        }
-        if (img == 'imgAboutSectionGallery_4-1') {
-            document.getElementById('imgAboutSectionGallery_4-1').classList.add('active');
-        }
-    }
-
-    function aboutSectionGalleryClose_4() {
-        document.getElementById('aboutSectionGalleryWrapper_4').style.display = 'none';
-        document.getElementById('aboutSectionGallery_4').style.display = 'none';
-        document.getElementById('imgAboutSectionGallery_4-1').classList.remove('active');
-    }
-    // Обработка кнопки "Читать дальше"
-    document.addEventListener('DOMContentLoaded', function() {
-        const collapseElement = document.getElementById('aboutCollapse');
-        const toggleBtn = document.getElementById('aboutToggleBtn');
-        const arrowIcon = document.getElementById('arrowIcon');
-        const aboutSection = document.getElementById('sp-about');
-
-        collapseElement.addEventListener('show.bs.collapse', function() {
-            toggleBtn.innerHTML = 'Скрыть <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-top.svg" alt="" id="arrowIcon" />';
-        });
-
-        collapseElement.addEventListener('hide.bs.collapse', function() {
-            // Сначала прокрутка вверх
-            aboutSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-
-            // Потом сворачивание (с небольшой задержкой для завершения прокрутки)
-            setTimeout(function() {
-                toggleBtn.innerHTML = 'Читать дальше <img src="<?php echo get_template_directory_uri(); ?>/img/arrow-bottom.svg" alt="" id="arrowIcon" />';
-            }, 500);
-        });
-    });
-</script>
+<?php get_template_part('template-parts/about-section/about-section'); ?>
 
 <!-- SECTION: ПОДАРКИ -->
 <div id="sp-gifts" class="scroll-points"></div>
@@ -592,7 +273,7 @@
                     вам радость. Чтобы получить каталог и узнать обо всех идеях для сладких подарков, просто напишите нам.
                 </p>
 
-                <a href="pdf/catalog_new_compressed.pdf" class="btn btn-lg btn-corporate-color-1 mb-4 mb-lg-0" download> Скачать каталог </a>
+                <a href="<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf" class="btn btn-lg btn-corporate-color-1 mb-4 mb-lg-0" download> Скачать каталог </a>
             </div>
             <div class="col-lg-6"></div>
         </div>
@@ -639,6 +320,16 @@
     </div>
 </section>
 
+
+<?php
+$reviews_query = new WP_Query([
+    'post_type' => 'reviews',
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC'
+]);
+?>
+
 <section class="reviews-section section">
     <div class="container">
         <div class="row">
@@ -663,126 +354,87 @@
                 </div>
             </div>
         </div>
+
+        <?php if ($reviews_query->have_posts()): ?>
         <div class="row">
-            <!-- Отзыв 1 -->
-            <div class="col-lg-4 col-md-6">
+            <?php 
+            $counter = 0;
+            while ($reviews_query->have_posts()): 
+                $reviews_query->the_post();
+                $counter++;
+                
+                // Получаем данные отзыва
+                $company = get_the_title();
+                $review_date = get_post_meta(get_the_ID(), 'review_date', true);
+                $rating = get_post_meta(get_the_ID(), 'review_rating', true) ?: 5;
+                $full_text = get_the_content();
+                
+                // Обрезаем текст (примерно 30 слов = 6 строк)
+                $words = explode(' ', $full_text);
+                $preview_words = 30;
+                
+                if (count($words) > $preview_words) {
+                    $preview = implode(' ', array_slice($words, 0, $preview_words));
+                    $remaining = implode(' ', array_slice($words, $preview_words));
+                    $need_more = true;
+                } else {
+                    $preview = $full_text;
+                    $remaining = '';
+                    $need_more = false;
+                }
+                
+                $review_id = 'review-' . get_the_ID();
+            ?>
+            
+            <div class="col-lg-4 col-md-6 <?php echo $counter > 1 ? 'mt-4' : ''; ?> <?php echo $counter > 2 ? 'mt-lg-0' : ''; ?> <?php echo $counter == 2 ? 'mt-md-0' : ''; ?>">
                 <div class="review-card rounded h-100">
                     <div class="review-header d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
                         <div class="review-photo me-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ico/avatar.svg" alt="ООО «ВекторТех»" class="rounded-circle" width="50" height="50" />
+                            <?php if (has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail('thumbnail', ['class' => 'rounded-circle', 'width' => 50, 'height' => 50, 'alt' => esc_attr($company)]); ?>
+                            <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/ico/avatar.svg" alt="<?php echo esc_attr($company); ?>" class="rounded-circle" width="50" height="50" />
+                            <?php endif; ?>
                         </div>
                         <div class="review-info">
-                            <p class="review-title mb-0">ООО «ВекторТех»</p>
-                            <p class="review-date text-muted small mb-0">24 декабря 2024</p>
+                            <p class="review-title mb-0"><?php echo esc_html($company); ?></p>
+                            <p class="review-date text-muted small mb-0"><?php echo esc_html($review_date); ?></p>
                         </div>
                     </div>
 
                     <div class="review-rating mb-3 text-center text-md-start">
+                        <?php for ($i = 0; $i < $rating; $i++): ?>
                         <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
+                        <?php endfor; ?>
                     </div>
 
                     <div class="review-text">
                         <p class="mb-0">
-                            «В этом году решили отойти от стандартных новогодних наборов и заказали для нашего дружного коллектива вот такие душевные
-                            бочонки с мёдом.
+                            <?php echo esc_html($preview); ?><?php if ($need_more): ?>... 
+                            <a class="btn btn-link btn-link-review p-0 text-decoration-none" data-bs-toggle="collapse" href="#<?php echo $review_id; ?>">Читать далее</a>
+                            <?php endif; ?>
                         </p>
-                        <div class="collapse" id="review1">
+                        
+                        <?php if ($need_more): ?>
+                        <div class="collapse" id="<?php echo $review_id; ?>">
                             <p class="mb-0">
-                                Мёд — просто наивкуснейший, настоящий, чувствуется, что продукт высшего качества. Отдельно хотим отметить скорость:
-                                заказ был крупным, а бочонки пришли очень быстро, упакованные с заботой, мы успели всё подготовить к праздникам.
-                                Сотрудники были в полном восторге, многие сказали, что это лучший и самый экологичный подарок! Обязательно обратимся к
-                                вам ещё в следующем году.»
+                                <?php echo esc_html($remaining); ?>
                             </p>
                         </div>
-                        <a class="btn btn-link btn-link-review p-0 text-decoration-none" data-bs-toggle="collapse" href="#review1">Читать далее</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-
-            <!-- Отзыв 2 -->
-            <div class="col-lg-4 col-md-6  mt-4 mt-md-0">
-                <div class="review-card rounded h-100">
-                    <div class="review-header d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                        <div class="review-photo me-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ico/avatar.svg" alt="Иван Петров" class="rounded-circle" width="50" height="50" />
-                        </div>
-                        <div class="review-info">
-                            <p class="review-title mb-0">Иван Петров</p>
-                            <p class="review-date text-muted small mb-0">20 декабря 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="review-rating mb-3 text-center text-md-start">
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                    </div>
-
-                    <div class="review-text">
-                        <p class="mb-0">
-                            «Искали статусный и запоминающийся подарок нашим ключевым партнёрам по случаю 15-летия компании. Остановились на бочонках с
-                            гравировкой нашего логотипа. Результат превзошёл все ожидания! Бочонки смотрятся солидно, гравировка выполнена
-                        </p>
-                        <div class="collapse" id="review2">
-                            <p class="mb-0">Искали статусный и запоминающийся подарок нашим ключевым партнёрам по случаю 15-летия компании.»</p>
-                        </div>
-                        <a class="btn btn-link btn-link-review p-0 text-decoration-none" data-bs-toggle="collapse" href="#review2">Читать далее</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Отзыв 3 -->
-            <div class="col-lg-4 col-md-6  mt-4 mt-md-0">
-                <div class="review-card rounded h-100">
-                    <div class="review-header d-flex align-items-center mb-3 justify-content-center justify-content-md-start">
-                        <div class="review-photo me-3">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ico/avatar.svg" alt="Иван Петров" class="rounded-circle" width="50" height="50" />
-                        </div>
-                        <div class="review-info">
-                            <p class="review-title mb-0">Иван Петров</p>
-                            <p class="review-date text-muted small mb-0">20 декабря 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="review-rating mb-3 text-center text-md-start">
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                        <i class="star-filled"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/stars.svg" alt="stars" /></i>
-                    </div>
-
-                    <div class="review-text">
-                        <p class="mb-0">
-                            «Хотели поздравить наших прекрасных сотрудниц с 8 Марта чем-то тёплым, натуральным и полезным. Ваши медовые наборы в
-                            маленьких бочонках стали идеальным решением! Девушки были безумно рады, особенно оценили качество
-                        </p>
-                        <div class="collapse" id="review3">
-                            <p class="mb-0">
-                                Хотели поздравить наших прекрасных сотрудниц с 8 Марта чем-то тёплым, натуральным и полезным. Ваши медовые наборы в
-                                маленьких бочонках стали идеальным решением!»
-                            </p>
-                        </div>
-                        <a class="btn btn-link btn-link-review p-0 text-decoration-none" data-bs-toggle="collapse" href="#review3">Читать далее</a>
-                    </div>
-                </div>
-            </div>
+            
+            <?php endwhile; ?>
         </div>
-
-        <!-- Кнопка "Показать все отзывы" -->
-        <div class="row text-center mt-3 pt-4">
-            <div class="col">
-                <a href="https://yandex.ru/" target="_blank" class="btn btn-corporate-color-1">Все отзывы</a>
-            </div>
-        </div>
+        <?php 
+        wp_reset_postdata();
+        endif; 
+        ?>
     </div>
 </section>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Для каждого collapse элемента
@@ -802,9 +454,8 @@
     });
 </script>
 
-
 <!-- SECTION: БЛАГОДАРНОСТИ (СЕРТИФИКАТЫ) -->
-<div id="sp-clients" class="scroll-points"></div>
+<!-- <div id="sp-clients" class="scroll-points"></div>
 <section class="section bg-image bg-light section-certificates">
     <div class="container">
         <div class="row">
@@ -853,7 +504,6 @@
                 </div>
             </div>
 
-            <!-- Модальное окно для сертификатов -->
             <div id="certificatesSectionGalleryWrapper" style="display: none">
                 <div id="certificatesSectionGallery" class="carousel slide" data-bs-ride="false" data-bs-interval="false" style="display: none; position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 99999; background: rgba(0, 0, 0, 0.9)">
                     <div class="carousel-indicators">
@@ -891,7 +541,7 @@
         wp_reset_postdata(); ?>
     </div>
 </section>
-
+ -->
 <!-- SECTION: ПАРТНЕРЫ -->
 <section class="section section-glide text-dark">
     <div class="container">

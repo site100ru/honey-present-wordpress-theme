@@ -300,7 +300,7 @@
                         с Вашим логотипом к Новому году
                     </h1>
 
-                    <a href="pdf/catalog_new_compressed.pdf" class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" download="">
+                    <a href="<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf" class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" download="">
                         Скачать каталог
                     </a>
                 </div>
