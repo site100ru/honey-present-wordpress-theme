@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900">
-    <meta name="description" content="<?php bloginfo(); ?>" />
-    <meta property="og:description" content="<?php bloginfo(); ?>" />
-    <meta name="keywords" content="<?php echo wp_get_document_title(); ?>" />
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta property="og:description" content="<?php bloginfo('description'); ?>" />
+    <meta name="keywords" content="<?php bloginfo('name'); ?>" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-    <meta property="og:title" content="<?php echo wp_get_document_title(); ?>" />
+    <meta property="og:title" content="<?php bloginfo('name'); ?>" />
 
     <?php wp_head(); ?>
     <?php if ($counter_head = get_theme_mod('mytheme_counter_head')): ?>
@@ -308,12 +308,14 @@
                             style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.15) 100%)"></div>
                     </div>
                     <h1 class="home-title home-title-main text-center text-lg-start mb-3 mb-xl-4 pb-0 pb-xl-3">
-                        <?php bloginfo('name'); ?>
+                        <?php echo get_the_title(); ?>
                     </h1>
 
-                    <a href="<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf" class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" download="">
+                    <button class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" data-bs-toggle="modal" data-bs-target="#downloadModal">Скачать каталог</button>
+
+                    <!-- <a href="<?php echo get_template_directory_uri(); ?>/pdf/catalog_new_compressed.pdf" class="btn btn-corporate-color-1 mb-4 text-center text-md-start home-download" download="">
                         Скачать каталог
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </div>

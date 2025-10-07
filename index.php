@@ -1,3 +1,9 @@
+<?php
+
+/**
+ * Template Name: Главная страница с картинкой
+ */
+?>
 <!-- HEADER -->
 <?php get_header(); ?>
 
