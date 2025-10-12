@@ -12,6 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
     <meta property="og:title" content="<?php bloginfo('name'); ?>" />
+    <link rel="shortcut icon" href="https://xn----8sbehccc1armydmr2n.xn--p1ai/wp-content/uploads/2025/10/logo-512.png" type="image/x-icon" id="favicon">
 
     <?php wp_head(); ?>
     <?php if ($counter_head = get_theme_mod('mytheme_counter_head')): ?>
